@@ -18,13 +18,13 @@ import useData from '../lib/use-data'
 
 function StoryWithData({ id }) {
   const data = useData(`s-${id}`, () =>
-    fetchData(`item/${id}`, 500).then(transform)
+    fetchData(`item/${id}`).then(transform)
   )
   return <Story {...data} />
 }
 
 function NewsWithData() {
-  const storyIds = useData('top', () => fetchData('topstories'))
+  const storyIds = useData('top', () => fetchData('topstories', 500))
   return (
     <>
       {storyIds.slice(0, 30).map((id) => {

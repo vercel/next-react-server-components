@@ -7,11 +7,11 @@ import fetchData from '../lib/fetch-data'
 import { transform } from '../lib/get-item'
 
 export async function getServerSideProps() {
-  const storyIds = await fetchData('topstories')
+  const storyIds = await fetchData('topstories', 500)
   const data = await Promise.all(
     storyIds
       .slice(0, 30)
-      .map((id) => fetchData(`item/${id}`, 500).then(transform))
+      .map((id) => fetchData(`item/${id}`).then(transform))
   )
 
   return {
