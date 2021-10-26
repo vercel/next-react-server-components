@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Nav() {
   ;<ul className="nav-ul">
     <Item href="/newest">new</Item>
@@ -36,8 +34,6 @@ export default function Nav() {
 
 const Item = ({ href, children }) => (
   <li>
-    <Link href={href}>
-      <a>{children}</a>
-    </Link>
+    <a href={href}>{children}</a>
   </li>
 )

@@ -78,9 +78,7 @@ export default function Header() {
           </div>
         </div>
         <div className="right">
-          <Link href="/login">
-            <a className="login">login</a>
-          </Link>
+          <a href="/login" className="login">login</a>
         </div>
       </header>
     </>

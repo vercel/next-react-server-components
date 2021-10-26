@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useState } from 'react'
 
 import timeAgo from '../lib/time-ago'
@@ -29,13 +28,7 @@ export default function Story({
         >
           &#9650;
         </span>
-        {url ? (
-          <a href={url}>{title}</a>
-        ) : (
-          <Link href={`/item?id=${id}`}>
-            <a>{title}</a>
-          </Link>
-        )}
+        <a href={url}>{title}</a>
         {url && (
           <span className="source">
             <a href={`http://${host}`}>{host.replace(/^www\./, '')}</a>
@@ -44,20 +37,16 @@ export default function Story({
       </div>
       <div className="meta">
         {score} {plural(score, 'point')} by{' '}
-        <Link href={`/user?id=${user}`}>
-          <a>{user}</a>
-        </Link>{' '}
-        <Link href={`/item?id=${id}`}>
-          <a>
-            {timeAgo(new Date(date)) /* note: we re-hydrate due to ssr */} ago
-          </a>
-        </Link>{' '}
+        <a href={`/user?id=${user}`}>
+          {user}
+        </a>{' '}
+        <a href={`/item?id=${id}`}>
+          {timeAgo(new Date(date)) /* note: we re-hydrate due to ssr */} ago
+        </a>{' '}
         |{' '}
-        <Link href={`/item?id=${id}`}>
-          <a>
-            {commentsCount} {plural(commentsCount, 'comment')}
-          </a>
-        </Link>
+        <a href={`/item?id=${id}`}>
+          {commentsCount} {plural(commentsCount, 'comment')}
+        </a>
       </div>
     </div>
   )
