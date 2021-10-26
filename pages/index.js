@@ -24,6 +24,27 @@ export default function Page() {
           🐌 RSC with API Delays + HTTP Streaming
         </a>
       </section>
+      <br />
+      <section>
+        <p>
+          <small>
+            This demo is built with Next.js and React Server Components. Read
+            about our blog post here:{" "}
+            <a href="https://nextjs.org/blog/next-12" target="_blank">
+              Next.js 12
+            </a>
+            .
+          </small>
+        </p>
+        <p>
+          <small>
+            Check out the code:{" "}
+            <a href="https://github.com/vercel/next-rsc-demo" target="_blank">
+              https://github.com/vercel/next-rsc-demo
+            </a>
+          </small>
+        </p>
+      </section>
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -52,6 +73,12 @@ export default function Page() {
             .container {
               font-size: 20px;
               text-align: center;
+            }
+            small {
+              font-size: .8em;
+            }
+            p {
+              margin: 10px;
             }
             section {
               display: block;
