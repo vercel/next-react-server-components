@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 // import Router from 'next/router'
 
 export default function Meta() {
@@ -23,104 +23,40 @@ export default function Meta() {
         padding: 0;
         box-sizing: border-box;
       }
-      .sk-fading-circle {
+      .spinner {
         margin: 12px;
         width: 28px;
         height: 28px;
-        position: relative;
+        animation: spinner-rotating 1.2s infinite;
+        animation-timing-function: steps(12, end);
       }
-      .sk-fading-circle .sk-circle {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-      .sk-fading-circle .sk-circle:before {
+      .spinner:before {
         content: '';
         display: block;
-        margin: 0 auto;
-        width: 15%;
-        height: 15%;
-        background-color: #333;
-        border-radius: 100%;
-        animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+        width: 4px;
+        height: 4px;
+        margin: 0;
+        margin-left: 12px;
+        border-radius: 50%;
+        background: #888;
+        color: #ccc;
+        box-shadow:
+          6px 1.61px,
+          10.39px 6px,
+          12px 12px,
+          10.39px 18px,
+          6px 22.39px,
+          0 24px,
+          -6px 1.61px #999,
+          -10.39px 6px #aaa,
+          -12px 12px #bbb,
+          -10.39px 18px,
+          -6px 22.39px;
       }
-      .sk-fading-circle .sk-circle2 {
-        transform: rotate(30deg);
+      @keyframes spinner-rotating {
+        from { transform: rotate(0deg) }
+        to { transform: rotate(360deg) }
       }
-      .sk-fading-circle .sk-circle3 {
-        transform: rotate(60deg);
-      }
-      .sk-fading-circle .sk-circle4 {
-        transform: rotate(90deg);
-      }
-      .sk-fading-circle .sk-circle5 {
-        transform: rotate(120deg);
-      }
-      .sk-fading-circle .sk-circle6 {
-        transform: rotate(150deg);
-      }
-      .sk-fading-circle .sk-circle7 {
-        transform: rotate(180deg);
-      }
-      .sk-fading-circle .sk-circle8 {
-        transform: rotate(210deg);
-      }
-      .sk-fading-circle .sk-circle9 {
-        transform: rotate(240deg);
-      }
-      .sk-fading-circle .sk-circle10 {
-        transform: rotate(270deg);
-      }
-      .sk-fading-circle .sk-circle11 {
-        transform: rotate(300deg);
-      }
-      .sk-fading-circle .sk-circle12 {
-        transform: rotate(330deg);
-      }
-      .sk-fading-circle .sk-circle2:before {
-        animation-delay: -1.1s; 
-      }
-      .sk-fading-circle .sk-circle3:before {
-        animation-delay: -1s; 
-      }
-      .sk-fading-circle .sk-circle4:before {
-        animation-delay: -0.9s; 
-      }
-      .sk-fading-circle .sk-circle5:before {
-        animation-delay: -0.8s; 
-      }
-      .sk-fading-circle .sk-circle6:before {
-        animation-delay: -0.7s; 
-      }
-      .sk-fading-circle .sk-circle7:before {
-        animation-delay: -0.6s; 
-      }
-      .sk-fading-circle .sk-circle8:before {
-        animation-delay: -0.5s; 
-      }
-      .sk-fading-circle .sk-circle9:before {
-        animation-delay: -0.4s;
-      }
-      .sk-fading-circle .sk-circle10:before {
-        animation-delay: -0.3s;
-      }
-      .sk-fading-circle .sk-circle11:before {
-        animation-delay: -0.2s;
-      }
-      .sk-fading-circle .sk-circle12:before {
-        animation-delay: -0.1s;
-      }
-      @-webkit-keyframes sk-circleFadeDelay {
-        0%, 39%, 100% { opacity: 0; }
-        40% { opacity: 1; }
-      }
-      @keyframes sk-circleFadeDelay {
-        0%, 39%, 100% { opacity: 0; }
-        40% { opacity: 1; } 
-      }
-
       .title {
         font-size: 15px;
         margin-bottom: 3px;
@@ -153,5 +89,5 @@ export default function Meta() {
         }}
       />
     </div>
-  )
+  );
 }
