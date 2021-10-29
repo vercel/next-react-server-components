@@ -1,4 +1,4 @@
-# Next.js 12 React Server Components Demo
+# Next.js 12 React Server Components Demo (Alpha)
 
 This is the demo of Hacker News built with Next.js and React Server Components. Read our announcement here: [Next.js 12](https://nextjs.org/blog/next-12).
 
