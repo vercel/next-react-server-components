@@ -1,12 +1,12 @@
-import Head from "next/head";
+import Head from 'next/head'
 // import Router from 'next/router'
 
 export default function Meta() {
   return (
     <div>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta charSet='utf-8' />
         {/* <link rel="shortcut icon" href="/static/favicon.ico" /> */}
       </Head>
       <style
@@ -85,9 +85,38 @@ export default function Meta() {
       .meta a:hover {
         text-decoration: underline;
       }
+      .item-skeleton {
+        margin: 8px 0;
+        overflow: hidden;
+      }
+      .item-skeleton:before, .item-skeleton:after {
+        content: '';
+        display: block;
+        width: 350px;
+        max-width: 100%;
+        height: 16px;
+        background: #eee;
+        margin: 2px 0 6px;
+        background-image: linear-gradient(270deg, #ccc, #eee, #eee, #ccc);
+        background-size: 400% 100%;
+        animation: highlight-rotating 8s ease infinite;
+      }
+      .item-skeleton:after {
+        width: 250px;
+        height: 10px;
+        margin: 5px 0;
+      }
+      @keyframes highlight-rotating {
+        from {
+          background-position: 200% 0;
+        }
+        to {
+          background-position: -200% 0;
+        }
+      }
     `,
         }}
       />
     </div>
-  );
+  )
 }

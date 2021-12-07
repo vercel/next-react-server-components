@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 
 // Shared Components
-import Spinner from '../components/spinner'
+import Skeletons from '../components/skeletons'
 
 // Server Components
 import SystemInfo from '../components/server-info.server'
@@ -35,7 +35,7 @@ function NewsWithData() {
 export default function News() {
   return (
     <Page>
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={<Skeletons />}>
         <NewsWithData />
       </Suspense>
       <Footer />
