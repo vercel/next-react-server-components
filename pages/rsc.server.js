@@ -26,11 +26,7 @@ function NewsWithData() {
   return (
     <>
       {storyIds.slice(0, 30).map((id) => {
-        return (
-          <Suspense fallback={<Spinner />} key={id}>
-            <StoryWithData id={id} />
-          </Suspense>
-        )
+        return <StoryWithData id={id} key={id} />
       })}
     </>
   )
