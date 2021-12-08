@@ -86,7 +86,7 @@ export default function Meta() {
         text-decoration: underline;
       }
       .item-skeleton {
-        margin: 8px 0;
+        margin: 5px 0;
         overflow: hidden;
       }
       .item-skeleton:before, .item-skeleton:after {
@@ -96,7 +96,7 @@ export default function Meta() {
         max-width: 100%;
         height: 16px;
         background: #eee;
-        margin: 2px 0 6px;
+        margin: 6px 0 2px;
         background-image: linear-gradient(270deg, #ccc, #eee, #eee, #ccc);
         background-size: 400% 100%;
         animation: highlight-rotating 8s ease infinite;
