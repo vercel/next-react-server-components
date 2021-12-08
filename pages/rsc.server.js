@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 
 // Shared Components
-import Spinner from '../components/spinner'
+import Skeletons from '../components/skeletons'
 
 // Server Components
 import SystemInfo from '../components/server-info.server'
@@ -26,11 +26,7 @@ function NewsWithData() {
   return (
     <>
       {storyIds.slice(0, 30).map((id) => {
-        return (
-          <Suspense fallback={<Spinner />} key={id}>
-            <StoryWithData id={id} />
-          </Suspense>
-        )
+        return <StoryWithData id={id} key={id} />
       })}
     </>
   )
@@ -39,7 +35,7 @@ function NewsWithData() {
 export default function News() {
   return (
     <Page>
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={<Skeletons />}>
         <NewsWithData />
       </Suspense>
       <Footer />
