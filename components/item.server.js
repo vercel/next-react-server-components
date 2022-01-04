@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react'
 import { useRouter } from 'next/router'
 
-import Page from '../components/page.client'
-import Item from '../components/item.client'
+import Page from './page.client'
+import Item from './item.client'
 
 import getItem from '../lib/get-item'
 import getComments from '../lib/get-comments'
@@ -31,9 +31,7 @@ function ItemPageWithData({ id }) {
   )
 }
 
-export default function ItemPage() {
-  const { id } = useRouter().query
-
+export default function ItemPage({ id }) {
   if (!id) return null
 
   return (
