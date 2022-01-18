@@ -1,8 +1,6 @@
 export default () => (
   <div>
-    <textarea />
-    <button>add comment</button>
-    <style jsx>{`
+    <style dangerouslySetInnerHTML={{ __html: `
       textarea {
         width: 400px;
         height: 100px;
@@ -17,6 +15,8 @@ export default () => (
           width: 100%;
         }
       }
-    `}</style>
+    `}} />
+    <textarea />
+    <button>add comment</button>
   </div>
 )

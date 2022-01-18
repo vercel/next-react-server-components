@@ -37,7 +37,7 @@ export default class Comment extends React.Component {
               </div>,
             ]}
 
-        <style jsx>{`
+        <style dangerouslySetInnerHTML={{ __html: `
           .comment {
             padding-top: 15px;
           }
@@ -70,7 +70,7 @@ export default class Comment extends React.Component {
           .text :global(a) {
             color: #000;
           }
-        `}</style>
+        `}} />
       </div>
     )
   }

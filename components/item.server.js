@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react'
-import { useRouter } from 'next/router'
 
 import Page from './page.client'
 import Item from './item.client'
 
 import getItem from '../lib/get-item'
 import getComments from '../lib/get-comments'
+import Skeletons from './skeletons'
 
 let commentsData = {}
 let storyData = {}
@@ -25,9 +25,7 @@ function ItemPageWithData({ id }) {
   }
 
   return (
-    <Page>
-      <Item story={storyData[id]} comments={commentsData[id]} />
-    </Page>
+    <Item story={storyData[id]} comments={commentsData[id]} />
   )
 }
 
@@ -35,8 +33,10 @@ export default function ItemPage({ id }) {
   if (!id) return null
 
   return (
-    <Suspense>
-      <ItemPageWithData id={id} />
-    </Suspense>
+    <Page>
+      <Suspense fallback={<Skeletons count={10} />}>
+        <ItemPageWithData id={id} />
+      </Suspense>
+    </Page>
   )
 }

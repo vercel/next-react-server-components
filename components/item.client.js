@@ -5,21 +5,7 @@ import CommentForm from '../components/comment-form'
 export default function Item({ story, comments = null }) {
   return (
     <div className="item">
-      <Story {...story} />
-
-      <div className="form">
-        <CommentForm />
-      </div>
-
-      <div className="comments">
-        {comments ? (
-          comments.map((comment) => <Comment key={comment.id} {...comment} />)
-        ) : (
-          <div className="loading">Loading…</div>
-        )}
-      </div>
-
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .item {
           padding: 10px 29px;
         }
@@ -37,7 +23,20 @@ export default function Item({ story, comments = null }) {
             padding: 8px 0px;
           }
         }
-      `}</style>
+      `}} />
+      <Story {...story} />
+
+      <div className="form">
+        <CommentForm />
+      </div>
+
+      <div className="comments">
+        {comments ? (
+          comments.map((comment) => <Comment key={comment.id} {...comment} />)
+        ) : (
+          <div className="loading">Loading…</div>
+        )}
+      </div>      
     </div>
   )
 }
