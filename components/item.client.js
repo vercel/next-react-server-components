@@ -1,25 +1,27 @@
+import { Suspense } from 'react'
 import Story from '../components/story.client'
 import Comment from '../components/comment'
 import CommentForm from '../components/comment-form'
+import useData from '../lib/use-data'
+import getComments from '../lib/get-comments'
+import Skeletons from './skeletons'
 
-export default function Item({ story, comments = null }) {
+function Comments({ story }) {
+  if (!story) return <div className="loading">No Comments</div>
+  const comments = useData(`comments/${story.id}`, () => getComments(story.comments))
+  return (
+    <div className="comments">
+      {comments.map((comment) => 
+        <Comment key={comment.id} {...comment} />
+      )}
+    </div>
+  )
+}
+
+export default function Item({ story }) {
   return (
     <div className="item">
-      <Story {...story} />
-
-      <div className="form">
-        <CommentForm />
-      </div>
-
-      <div className="comments">
-        {comments ? (
-          comments.map((comment) => <Comment key={comment.id} {...comment} />)
-        ) : (
-          <div className="loading">Loading…</div>
-        )}
-      </div>
-
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .item {
           padding: 10px 29px;
         }
@@ -37,7 +39,21 @@ export default function Item({ story, comments = null }) {
             padding: 8px 0px;
           }
         }
-      `}</style>
+      `}} />
+      <Story {...story} />
+
+      <div className="form">
+        <CommentForm />
+      </div>
+
+      <Suspense fallback={
+        <div>
+          {`Loading comments...`}
+          <Skeletons count={3} />
+        </div>
+      }>
+        <Comments story={story} />
+      </Suspense>
     </div>
   )
 }
