@@ -15,7 +15,7 @@ This demo is built for showing what features that Server Components provide and 
 
 This Next.js application uses React 18 (RC build) and the new [Edge Runtime](https://nextjs.org/docs/api-reference/edge-runtime). It has `runtime` set to `'edge'` and feature flag `serverComponents` enabled. You can check out [next.config.js](https://github.com/vercel/next-rsc-demo/blob/main/next.config.js) for more details.
 
-### Develop It Locally
+### Running Locally
 
 1. `yarn install`
 2. `yarn dev`
