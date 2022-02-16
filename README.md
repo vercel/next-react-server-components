@@ -13,7 +13,7 @@ This demo is built for showing what features that Server Components provide and 
 
 ## Technical Details
 
-This Next.js application uses React 18 (RC build) and the new [Edge Runtime](https://nextjs.org/docs/api-reference/edge-runtime). It has `runtime` set to `'edge'` and feature flag `serverComponents` enabled. You can check out [next.config.js](https://github.com/vercel/next-rsc-demo/blob/main/next.config.js) for more details.
+This Next.js application uses React 18 (RC build) and the new [Edge Runtime](https://nextjs.org/docs/api-reference/edge-runtime). It has `runtime` set to `'edge'` and feature flag `serverComponents` enabled. You can check out [next.config.js](https://github.com/vercel/next-react-server-components/blob/main/next.config.js) for more details.
 
 ### Running Locally
 
@@ -26,7 +26,7 @@ Go to `localhost:3000`.
 
 You can quickly deploy the demo to Vercel by clicking this link:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext-rsc-demo&project-name=next-rsc-hn&repo-name=next-rsc-hn&demo-title=React%20Server%20Components%20(Experimental%20Demo)&demo-description=Experimental%20demo%20of%20React%20Server%20Components%20with%20Next.js.%20&demo-url=https%3A%2F%2Fnext-rsc-hn.vercel.app&demo-image=https%3A%2F%2Fnext-server-components.vercel.app%2Fog.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext-react-server-components&project-name=next-react-server-components&repo-name=next-react-server-components&demo-title=React%20Server%20Components%20(Experimental%20Demo)&demo-description=Experimental%20demo%20of%20React%20Server%20Components%20with%20Next.js.%20&demo-url=https%3A%2F%2Fnext-rsc-hn.vercel.app&demo-image=https%3A%2F%2Fnext-server-components.vercel.app%2Fog.png)
 
 ## License
 
