@@ -1,22 +1,33 @@
 # Next.js 12 React Server Components Demo (Alpha)
 
-This is the demo of Hacker News built with Next.js and React Server Components. Read our announcement here: [Next.js 12](https://nextjs.org/blog/next-12).
+Try the demo live here: [**next-rsc-hn.vercel.app**](https://next-rsc-hn.vercel.app).
 
-**Try the demo: https://next-news-rsc.vercel.sh**
+## Introduction
 
-### Development
+This is a demo app of the Hacker News website clone, which shows Next.js 12's experimental React Server Components support. We recommend you taking a look at these links, before trying out the experimental feature:
+- [**Introducing Zero-Bundle-Size React Server Components**](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html)
+- [**Everything About React Server Components**](https://vercel.com/blog/everything-about-react-server-components)
+- [**Docs of React Server Components in Next.js**](https://nextjs.org/docs/advanced-features/react-18#react-server-components)
 
-To get started, run the following commands:
+This demo is built for showing what features that Server Components provide and what the application structure might look like. **It's not ready for production adoption, or performance benchmarking** as the underlying APIs are not stable yet, and might change or be improved in the future.
 
-```
-yarn
-yarn dev
-```
+## Technical Details
 
-And visit localhost:3000.
+This Next.js application uses React 18 (RC build) and the new [Edge Runtime](https://nextjs.org/docs/api-reference/edge-runtime). It has `runtime` set to `'edge'` and feature flag `serverComponents` enabled. You can check out [next.config.js](https://github.com/vercel/next-rsc-demo/blob/main/next.config.js) for more details.
 
-### Note
+### Develop It Locally
 
-React Server Components are still [experimental](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html). To learn more about React Server Components, read our blog post: [Everything About React Server Components](https://vercel.com/blog/everything-about-react-server-components).
+1. `yarn install`
+2. `yarn dev`
 
-React Server Components support is a built-in feature of Next.js 12. Full documentation is available here: [React 18 — Next.js](https://nextjs.org/docs/advanced-features/react-18).
+Go to `localhost:3000`.
+
+### Deploy
+
+You can quickly deploy the demo to Vercel by clicking this link:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext-rsc-demo&project-name=next-rsc-hn&repo-name=next-rsc-hn&demo-title=React%20Server%20Components%20(Experimental%20Demo)&demo-description=Experimental%20demo%20of%20React%20Server%20Components%20with%20Next.js.%20&demo-url=https%3A%2F%2Fnext-rsc-hn.vercel.app&demo-image=https%3A%2F%2Fnext-server-components.vercel.app%2Fog.png)
+
+## License
+
+This demo is MIT licensed.
