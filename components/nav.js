@@ -6,9 +6,7 @@ export default function Nav() {
     <Item href="/jobs">jobs</Item>
     <Item href="/submit">submit</Item>
 
-    <style
-      dangerouslySetInnerHTML={{
-        __html: `
+    <style jsx>{`
       .nav-ul {
         list-style-type: none;
       }
@@ -26,9 +24,7 @@ export default function Nav() {
       .nav-ul li a:hover {
         color: #fff;
       }
-    `,
-      }}
-    />
+    `}</style>
   </ul>
 }
 

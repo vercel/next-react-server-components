@@ -7,11 +7,8 @@ export default function Meta() {
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta charSet='utf-8' />
-        {/* <link rel="shortcut icon" href="/static/favicon.ico" /> */}
       </Head>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
+      <style jsx global>{`
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
           'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
@@ -114,9 +111,7 @@ export default function Meta() {
           background-position: -200% 0;
         }
       }
-    `,
-        }}
-      />
+    `}</style>
     </div>
   )
 }
