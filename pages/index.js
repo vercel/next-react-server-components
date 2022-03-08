@@ -45,7 +45,7 @@ export default function Page() {
           </small>
         </p>
       </section>
-      <style jsx>{`
+      <style jsx global>{`
             html {
               height: 100%;
             }
