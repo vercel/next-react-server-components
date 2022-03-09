@@ -21,7 +21,7 @@ function Comments({ story }) {
 export default function Item({ story }) {
   return (
     <div className="item">
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style jsx>{`
         .item {
           padding: 10px 29px;
         }
@@ -39,7 +39,7 @@ export default function Item({ story }) {
             padding: 8px 0px;
           }
         }
-      `}} />
+      `}</style>
       <Story {...story} />
 
       <div className="form">

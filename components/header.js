@@ -5,9 +5,8 @@ import Link from 'next/link'
 export default function Header() {
   return (
     <>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
+      <style jsx>
+        {`
   header {
     background: #ffa52a;
     display: flex;
@@ -60,9 +59,8 @@ export default function Header() {
       display: block;
     }
   }
-`,
-        }}
-      />
+`}
+ </style>
       <header>
         <div className="left">
           <Link href="/">

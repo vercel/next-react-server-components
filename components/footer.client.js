@@ -6,9 +6,7 @@ export default function Footer() {
         Contact
       </footer>
 
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
+      <style jsx>{`
       .footer {
         padding: 10px 0 40px;
         color: #ccc;
@@ -17,9 +15,7 @@ export default function Footer() {
         border-top: 1px solid;
         margin-top: 50px;
       }
-    `,
-        }}
-      />
+    `}</style>
     </div>
   )
 }

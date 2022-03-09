@@ -45,9 +45,7 @@ export default function Page() {
           </small>
         </p>
       </section>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
+      <style jsx global>{`
             html {
               height: 100%;
             }
@@ -87,9 +85,8 @@ export default function Page() {
             }
             section a {
               color: #1386ff;
-            }`,
-        }}
-      />
+            }`
+        }</style>
     </div>
   );
 }

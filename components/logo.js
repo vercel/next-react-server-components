@@ -2,9 +2,7 @@ export default function Logo() {
   return (
     <>
       <span className="logo-n">N</span>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
+      <style jsx>{`
       .logo-n {
         border: 1px solid #fff;
         display: inline-block;
@@ -13,9 +11,7 @@ export default function Logo() {
         font-size: 11px;
         padding: 5px 8px;
       }
-    `,
-        }}
-      />
+    `}</style>
     </>
   )
 }

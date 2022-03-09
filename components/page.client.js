@@ -4,9 +4,7 @@ import Meta from './meta'
 export default function Page({ children }) {
   return (
     <>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
+      <style jsx global>{`
     .main {
       width: 85%;
       margin: auto;
@@ -23,9 +21,7 @@ export default function Page({ children }) {
         width: auto;
       }
     }
-  `,
-        }}
-      />
+  `}</style>
       <div className="main">
         <Meta />
         <Header />
