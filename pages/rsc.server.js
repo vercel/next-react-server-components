@@ -10,6 +10,7 @@ import SystemInfo from '../components/server-info.server'
 import Page from '../components/page.client'
 import Story from '../components/story.client'
 import Footer from '../components/footer.client'
+import ErrorPlaceholder from '../components/error-placeholder.client'
 
 // Utils
 import fetchData from '../lib/fetch-data'
@@ -17,17 +18,21 @@ import { transform } from '../lib/get-item'
 import useData from '../lib/use-data'
 
 function StoryWithData({ id }) {
-  const data = useData(`s-${id}`, () => fetchData(`item/${id}`).then(transform))
+  const { data } = useData(`s-${id}`, () => fetchData(`item/${id}`).then(transform))
   return <Story {...data} />
 }
 
 function NewsWithData() {
-  const storyIds = useData('top', () => fetchData('topstories'))
+  const { data: storyIds, error } = useData('top', () => fetchData('topstories'))
   return (
     <>
-      {storyIds.slice(0, 30).map((id) => {
-        return <StoryWithData id={id} key={id} />
-      })}
+      {error ? <ErrorPlaceholder error={error} /> : null}
+      {storyIds ?
+        storyIds.slice(0, 30).map((id) => {
+          return <StoryWithData id={id} key={id} />
+        }) : 
+        null
+      }
     </>
   )
 }
