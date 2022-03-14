@@ -17,7 +17,7 @@ import { transform } from '../lib/get-item'
 import useData from '../lib/use-data'
 
 function StoryWithData({ id }) {
-  const data = useData(`s-${id}`, () =>
+  const { data } = useData(`s-${id}`, () =>
     fetchData(`item/${id}`).then(transform)
   )
   return <Story {...data} />

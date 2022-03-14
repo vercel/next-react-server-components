@@ -20,7 +20,7 @@ function StoryWithData({ id }) {
 }
 
 function NewsWithData() {
-  const storyIds = useData("top", () => fetchData("topstories"));
+  const { data: storyIds } = useData("top", () => fetchData("topstories"));
   return (
     <>
       {storyIds.slice(0, 30).map((id) => {
