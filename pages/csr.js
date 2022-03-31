@@ -47,3 +47,8 @@ export default function News() {
     </Page>
   );
 }
+
+
+export const config = {
+  runtime: 'edge',
+}
