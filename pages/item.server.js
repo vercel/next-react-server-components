@@ -4,3 +4,7 @@ export default function Item({ router }) {
   const { id } = router.query
   return <ItemPage id={id} />
 }
+
+export const config = {
+  runtime: 'edge',
+}

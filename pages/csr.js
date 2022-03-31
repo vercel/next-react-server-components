@@ -1,49 +1,54 @@
-import { Suspense } from "react";
-
-// Shared Components
-import Spinner from "../components/spinner";
+import { Suspense, useEffect, useState } from 'react'
 
 // Client Components
-import Page from "../components/page.client";
-import Story from "../components/story.client";
+import Page from '../components/page.client'
+import Story from '../components/story.client'
 
 // Utils
-import fetchData from "../lib/fetch-data";
-import { transform } from "../lib/get-item";
-import useData from "../lib/use-data";
+import fetchData from '../lib/fetch-data'
+import { transform } from '../lib/get-item'
+import useData from '../lib/use-data'
+import Skeletons from '../components/skeletons'
 
 function StoryWithData({ id }) {
-  const data = useData(`s-${id}`, () =>
-    fetchData(`item/${id}`).then(transform)
-  );
-  return <Story {...data} />;
+  if (typeof window === 'undefined') return <Skeletons />
+  const { data } = useData(`s-${id}`, () => fetchData(`item/${id}`).then(transform))
+  return <Story {...data} />
 }
 
 function NewsWithData() {
-  const { data: storyIds } = useData("top", () => fetchData("topstories"));
+  const { data: storyIds } = useData('top', () => fetchData('topstories'))
   return (
     <>
       {storyIds.slice(0, 30).map((id) => {
         return (
-          <Suspense key={id} fallback={<Spinner />}>
+          <Suspense key={id} fallback={<Skeletons />}>
             <StoryWithData id={id} />
           </Suspense>
-        );
+        )
       })}
     </>
-  );
+  )
 }
 
 export default function News() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   return (
     <Page>
-      {typeof window === "undefined" ? (
-        <Spinner />
-      ) : (
-        <Suspense fallback={<Spinner />}>
+      {mounted ? (
+        <Suspense fallback={<Skeletons />}>
           <NewsWithData />
         </Suspense>
+      ) : (
+        <Skeletons />
       )}
     </Page>
-  );
+  )
+}
+
+export const config = {
+  runtime: 'edge',
 }

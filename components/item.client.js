@@ -11,9 +11,9 @@ function Comments({ story }) {
   const { data: comments } = useData(`comments/${story.id}`, () => getComments(story.comments))
   return (
     <div className="comments">
-      {comments.map((comment) => 
+      {(comments || []).map((comment) => (
         <Comment key={comment.id} {...comment} />
-      )}
+      ))}
     </div>
   )
 }
@@ -46,12 +46,14 @@ export default function Item({ story }) {
         <CommentForm />
       </div>
 
-      <Suspense fallback={
-        <div>
-          {`Loading comments...`}
-          <Skeletons count={3} />
-        </div>
-      }>
+      <Suspense
+        fallback={
+          <div>
+            {`Loading comments...`}
+            <Skeletons count={3} />
+          </div>
+        }
+      >
         <Comments story={story} />
       </Suspense>
     </div>
