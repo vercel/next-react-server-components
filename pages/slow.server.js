@@ -1,8 +1,5 @@
 import { Suspense } from 'react'
 
-// Shared Components
-import Spinner from '../components/spinner'
-
 // Server Components
 import SystemInfo from '../components/server-info.server'
 
@@ -15,6 +12,7 @@ import Footer from '../components/footer.client'
 import fetchData from '../lib/fetch-data'
 import { transform } from '../lib/get-item'
 import useData from '../lib/use-data'
+import Skeletons from '../components/skeletons'
 
 function StoryWithData({ id }) {
   const { data } = useData(`s-${id}`, () =>
@@ -29,7 +27,7 @@ function NewsWithData() {
     <>
       {storyIds.slice(0, 30).map((id) => {
         return (
-          <Suspense key={id} fallback={<Spinner />}>
+          <Suspense key={id} fallback={<Skeletons />}>
             <StoryWithData id={id} />
           </Suspense>
         )
@@ -41,7 +39,7 @@ function NewsWithData() {
 export default function News() {
   return (
     <Page>
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={<Skeletons />}>
         <NewsWithData />
       </Suspense>
       <Footer />
