@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-import timeAgo from '../lib/time-ago'
-
 export default function Story({
   id,
   title,
@@ -16,7 +14,7 @@ export default function Story({
 
   return (
     <div style={{ margin: '5px 0' }}>
-      <div className="title">
+      <div className='title'>
         <span
           style={{
             cursor: 'pointer',
@@ -30,20 +28,15 @@ export default function Story({
         </span>
         <a href={url}>{title}</a>
         {url && (
-          <span className="source">
+          <span className='source'>
             <a href={`http://${host}`}>{host.replace(/^www\./, '')}</a>
           </span>
         )}
       </div>
-      <div className="meta">
+      <div className='meta'>
         {score} {plural(score, 'point')} by{' '}
-        <a href={`/user?id=${user}`}>
-          {user}
-        </a>{' '}
-        <a href={`/item?id=${id}`}>
-          {timeAgo(new Date(date)) /* note: we re-hydrate due to ssr */} ago
-        </a>{' '}
-        |{' '}
+        <a href={`/user?id=${user}`}>{user}</a>{' '}
+        <a href={`/item?id=${id}`}>{date}</a> |{' '}
         <a href={`/item?id=${id}`}>
           {commentsCount} {plural(commentsCount, 'comment')}
         </a>

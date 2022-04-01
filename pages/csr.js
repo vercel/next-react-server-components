@@ -12,7 +12,9 @@ import Skeletons from '../components/skeletons'
 
 function StoryWithData({ id }) {
   if (typeof window === 'undefined') return <Skeletons />
-  const { data } = useData(`s-${id}`, () => fetchData(`item/${id}`).then(transform))
+  const { data } = useData(`s-${id}`, () =>
+    fetchData(`item/${id}`).then(transform)
+  )
   return <Story {...data} />
 }
 
@@ -47,8 +49,4 @@ export default function News() {
       )}
     </Page>
   )
-}
-
-export const config = {
-  runtime: 'edge',
 }

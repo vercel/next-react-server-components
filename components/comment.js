@@ -1,7 +1,5 @@
 import React from 'react'
 
-import timeAgo from '../lib/time-ago'
-
 export default class Comment extends React.Component {
   constructor(props) {
     super(props)
@@ -12,10 +10,10 @@ export default class Comment extends React.Component {
   render() {
     const { user, text, date, comments } = this.props
     return (
-      <div className="comment">
-        <div className="meta">
-          {user} {timeAgo(new Date(date))} ago{' '}
-          <span onClick={this.toggle} className="toggle">
+      <div className='comment'>
+        <div className='meta'>
+          {user} {date}{' '}
+          <span onClick={this.toggle} className='toggle'>
             {this.state.toggled
               ? `[+${(this.props.commentsCount || 0) + 1}]`
               : '[-]'}
@@ -26,11 +24,11 @@ export default class Comment extends React.Component {
           ? null
           : [
               <div
-                key="text"
-                className="text"
+                key='text'
+                className='text'
                 dangerouslySetInnerHTML={{ __html: text }}
               />,
-              <div key="children" className="children">
+              <div key='children' className='children'>
                 {comments.map((comment) => (
                   <Comment key={comment.id} {...comment} />
                 ))}
