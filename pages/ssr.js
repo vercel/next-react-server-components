@@ -9,9 +9,7 @@ import { transform } from '../lib/get-item'
 export async function getServerSideProps() {
   const storyIds = await fetchData('topstories', 500)
   const data = await Promise.all(
-    storyIds
-      .slice(0, 30)
-      .map((id) => fetchData(`item/${id}`).then(transform))
+    storyIds.slice(0, 30).map((id) => fetchData(`item/${id}`))
   )
 
   return {
@@ -25,7 +23,7 @@ export default function News({ data }) {
   return (
     <Page>
       {data.map((item, i) => {
-        return <Story key={i} {...item} />
+        return <Story key={i} {...transform(item)} />
       })}
       <Footer />
     </Page>
