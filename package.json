@@ -5,7 +5,7 @@
     "start": "yarn next start"
   },
   "dependencies": {
-    "ms": "2.1.3",
+    "moment": "^2.29.1",
     "next": "^12.1.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
