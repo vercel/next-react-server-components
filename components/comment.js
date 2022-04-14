@@ -14,6 +14,7 @@ export default class Comment extends React.Component {
     return (
       <div className="comment">
         <div className="meta">
+          {/* TODO: time hydration mismatch */}
           {user} {timeAgo(new Date(date))} ago{' '}
           <span onClick={this.toggle} className="toggle">
             {this.state.toggled

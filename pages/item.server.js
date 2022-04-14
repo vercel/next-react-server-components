@@ -1,10 +1,13 @@
 import ItemPage from '../components/item.server'
 
-export default function Item({ router }) {
-  const { id } = router.query
+export default function Item({ id }) {
   return <ItemPage id={id} />
 }
 
-export const config = {
-  runtime: 'edge',
+export async function getServerSideProps({ query }) {
+  return {
+    props: {
+      id: query.id
+    }
+  }
 }
