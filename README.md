@@ -1,5 +1,7 @@
 # Next.js 12 React Server Components Demo (Alpha)
 
+> ⚠️ Server components in Next.js is still experimental, high risk to use it in production ⚠️
+
 Try the demo live here: [**next-rsc-hn.vercel.app**](https://next-rsc-hn.vercel.app).
 
 ## Introduction
