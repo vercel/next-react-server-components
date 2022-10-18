@@ -1,3 +1,5 @@
+import styles from './skeletons.module.css'
+
 export default function Skeletons({ count = 30 }) {
   // Generating {count = 30} skeletons to match the size of the list.
   return (
@@ -13,5 +15,5 @@ export default function Skeletons({ count = 30 }) {
 }
 
 function Skeleton() {
-  return <div className='item-skeleton' />
+  return <div className={styles['item-skeleton']} />
 }

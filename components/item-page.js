@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 
-import Page from './page.client'
-import Item from './item.client'
+import Page from './page'
+import Item from './item'
 import getItem from '../lib/get-item'
 import useData from '../lib/use-data'
 import Skeletons from './skeletons'

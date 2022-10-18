@@ -1,4 +1,4 @@
-# Next.js 12 React Server Components Demo (Alpha)
+# Next.js 12 React Server Components Demo (Beta)
 
 Try the demo live here: [**next-rsc-hn.vercel.app**](https://next-rsc-hn.vercel.app).
 

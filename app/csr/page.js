@@ -1,14 +1,16 @@
+'use client'
+
 import { Suspense, useEffect, useState } from 'react'
 
 // Client Components
-import Page from '../components/page.client'
-import Story from '../components/story.client'
+import Page from '../../components/page'
+import Story from '../../components/story'
 
 // Utils
-import fetchData from '../lib/fetch-data'
-import { transform } from '../lib/get-item'
-import useData from '../lib/use-data'
-import Skeletons from '../components/skeletons'
+import fetchData from '../../lib/fetch-data'
+import { transform } from '../../lib/get-item'
+import useData from '../../lib/use-data'
+import Skeletons from '../../components/skeletons'
 
 function StoryWithData({ id }) {
   if (typeof window === 'undefined') return <Skeletons />

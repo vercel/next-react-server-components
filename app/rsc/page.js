@@ -1,21 +1,21 @@
 import { Suspense } from 'react'
 
 // Shared Components
-import Skeletons from '../components/skeletons'
+import Skeletons from '../../components/skeletons'
 
 // Server Components
-import SystemInfo from '../components/server-info.server'
+import SystemInfo from '../../components/server-info'
 
 // Client Components
-import Page from '../components/page.client'
-import Story from '../components/story.client'
-import Footer from '../components/footer.client'
-import ErrorPlaceholder from '../components/error-placeholder.client'
+import Page from '../../components/page'
+import Story from '../../components/story'
+import Footer from '../../components/footer'
+import ErrorPlaceholder from '../../components/error-placeholder'
 
 // Utils
-import fetchData from '../lib/fetch-data'
-import { transform } from '../lib/get-item'
-import useData from '../lib/use-data'
+import fetchData from '../../lib/fetch-data'
+import { transform } from '../../lib/get-item'
+import useData from '../../lib/use-data'
 
 function StoryWithData({ id }) {
   const { data } = useData(`s-${id}`, () => fetchData(`item/${id}`).then(transform))
@@ -47,8 +47,4 @@ export default function News() {
       <SystemInfo />
     </Page>
   )
-}
-
-export const config = {
-  runtime: 'experimental-edge',
 }

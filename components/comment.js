@@ -1,82 +1,42 @@
-import React from 'react'
+'use client'
 
-import timeAgo from '../lib/time-ago'
+import { useState } from "react";
 
-export default class Comment extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { toggled: false }
-    this.toggle = this.toggle.bind(this)
-  }
+import timeAgo from "../lib/time-ago";
 
-  render() {
-    const { user, text, date, comments } = this.props
-    return (
-      <div className="comment">
-        <div className="meta">
-          {/* TODO: time hydration mismatch */}
-          {user} {timeAgo(new Date(date))} ago{' '}
-          <span onClick={this.toggle} className="toggle">
-            {this.state.toggled
-              ? `[+${(this.props.commentsCount || 0) + 1}]`
-              : '[-]'}
-          </span>
-        </div>
+import styles from './comment.module.css';
 
-        {this.state.toggled
-          ? null
-          : [
-              <div
-                key="text"
-                className="text"
-                dangerouslySetInnerHTML={{ __html: text }}
-              />,
-              <div key="children" className="children">
-                {comments.map((comment) => (
-                  <Comment key={comment.id} {...comment} />
-                ))}
-              </div>,
-            ]}
+export default function Comment({ user, text, date, comments, commentsCount }) {
+  const [toggled, setToggled] = useState(false)
 
-        <style jsx>{`
-          .comment {
-            padding-top: 15px;
-          }
-          .children {
-            padding-left: 20px;
-          }
-          .meta {
-            font-size: 12px;
-            margin-bottom: 5px;
-          }
-          .toggle {
-            cursor: pointer;
-          }
-          .text {
-            color: #000;
-            font-size: 13px;
-            line-height: 18px;
-          }
-          /* hn styles */
-          .text :global(p) {
-            margin-top: 10px;
-          }
-          .text :global(pre) {
-            margin-bottom: 10px;
-            max-width: 900px;
-            overflow: auto;
-            padding: 2px;
-            white-space: pre-wrap;
-          }
-          .text :global(a) {
-            color: #000;
-          }
-        `}</style>
+  const toggle = () => setToggled(!toggled)
+
+  return (
+    <div className={styles.comment}>
+      <div className={styles.meta}>
+        {/* TODO: time hydration mismatch */}
+        {user} {timeAgo(new Date(date))} ago{' '}
+        <span onClick={toggle} className={styles.toggle}>
+          {toggled
+            ? `[+${(commentsCount || 0) + 1}]`
+            : "[-]"}
+        </span>
       </div>
-    )
-  }
 
-  toggle() {
-    this.setState({ toggled: !this.state.toggled })
-  }
+      {toggled
+        ? null
+        : [
+            <div
+              key="text"
+              className={styles.text}
+              dangerouslySetInnerHTML={{ __html: text }}
+            />,
+            <div key="children" className={styles.children}>
+              {comments.map((comment) => (
+                <Comment key={comment.id} {...comment} />
+              ))}
+            </div>,
+          ]}
+    </div>
+  );
 }
