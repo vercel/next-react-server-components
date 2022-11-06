@@ -1,8 +1,8 @@
-import Nav from './nav'
-import Logo from './logo'
-import Link from 'next/link'
+import Nav from './nav';
+import Logo from './logo';
+import Link from 'next/link';
 
-import styles from './header.module.css'
+import styles from './header.module.css';
 
 export default function Header() {
   return (
@@ -12,15 +12,17 @@ export default function Header() {
           <span className={styles.logo}>
             <Logo />
           </span>
-          <span className={styles["site-title"]}>Hacker Next</span>
+          <span className={styles['site-title']}>Hacker Next</span>
         </Link>
         <div className={styles.nav}>
           <Nav />
         </div>
       </div>
       <div className={styles.right}>
-        <a href="/login" className={styles.login}>login</a>
+        <a href="/login" className={styles.login}>
+          login
+        </a>
       </div>
     </header>
-  )
+  );
 }

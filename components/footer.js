@@ -1,4 +1,4 @@
-import styles from './footer.module.css'
+import styles from './footer.module.css';
 
 export default function Footer() {
   return (
@@ -8,5 +8,5 @@ export default function Footer() {
         Contact
       </footer>
     </div>
-  )
+  );
 }

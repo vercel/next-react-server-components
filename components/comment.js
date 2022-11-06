@@ -1,15 +1,15 @@
-'use client'
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import timeAgo from "../lib/time-ago";
+import timeAgo from '../lib/time-ago';
 
 import styles from './comment.module.css';
 
 export default function Comment({ user, text, date, comments, commentsCount }) {
-  const [toggled, setToggled] = useState(false)
+  const [toggled, setToggled] = useState(false);
 
-  const toggle = () => setToggled(!toggled)
+  const toggle = () => setToggled(!toggled);
 
   return (
     <div className={styles.comment}>
@@ -17,9 +17,7 @@ export default function Comment({ user, text, date, comments, commentsCount }) {
         {/* TODO: time hydration mismatch */}
         {user} {timeAgo(new Date(date))} ago{' '}
         <span onClick={toggle} className={styles.toggle}>
-          {toggled
-            ? `[+${(commentsCount || 0) + 1}]`
-            : "[-]"}
+          {toggled ? `[+${(commentsCount || 0) + 1}]` : '[-]'}
         </span>
       </div>
 

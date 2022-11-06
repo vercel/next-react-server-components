@@ -5,4 +5,4 @@ export default () => (
     <textarea className={styles.textarea} />
     <button className={styles.button}>add comment</button>
   </div>
-)
+);

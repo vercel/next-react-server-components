@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 
 export default function Page() {
   return (
@@ -30,19 +30,21 @@ export default function Page() {
       <section>
         <p>
           <small>
-            This demo is built with Next.js and React Server Components. Read
-            about our blog post here:{" "}
-            <a href="https://nextjs.org/blog/next-12" target="_blank">
-              Next.js 12
+            This demo is built with Next.js and React Server Components. Learn
+            more:{' '}
+            <a href="http://nextjs.org/13" target="_blank">
+              Next.js 13
             </a>
-            .
           </small>
         </p>
         <p>
           <small>
-            Check out the code:{" "}
-            <a href="https://github.com/vercel/next-rsc-demo" target="_blank">
-              https://github.com/vercel/next-rsc-demo
+            Check out the code:{' '}
+            <a
+              href="https://github.com/vercel/next-react-server-components"
+              target="_blank"
+            >
+              https://github.com/vercel/next-react-server-components
             </a>
           </small>
         </p>

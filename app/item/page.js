@@ -1,5 +1,5 @@
-import ItemPage from '../../components/item-page'
+import ItemPage from '../../components/item-page';
 
 export default function Item({ searchParams }) {
-  return <ItemPage id={searchParams.id} />
+  return <ItemPage id={searchParams.id} />;
 }

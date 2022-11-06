@@ -1,23 +1,25 @@
-import { Suspense } from 'react'
-import Story from './story'
-import Comment from './comment'
-import CommentForm from './comment-form'
-import useData from '../lib/use-data'
-import getComments from '../lib/get-comments'
-import Skeletons from './skeletons'
+import { Suspense } from 'react';
+import Story from './story';
+import Comment from './comment';
+import CommentForm from './comment-form';
+import useData from '../lib/use-data';
+import getComments from '../lib/get-comments';
+import Skeletons from './skeletons';
 
-import styles from './item.module.css'
+import styles from './item.module.css';
 
 function Comments({ story }) {
-  if (!story) return <div className={styles.loading}>No Comments</div>
-  const { data: comments } = useData(`comments/${story.id}`, () => getComments(story.comments))
+  if (!story) return <div className={styles.loading}>No Comments</div>;
+  const { data: comments } = useData(`comments/${story.id}`, () =>
+    getComments(story.comments)
+  );
   return (
     <div className={styles.comments}>
       {(comments || []).map((comment) => (
         <Comment key={comment.id} {...comment} />
       ))}
     </div>
-  )
+  );
 }
 
 export default function Item({ story }) {
@@ -40,5 +42,5 @@ export default function Item({ story }) {
         <Comments story={story} />
       </Suspense>
     </div>
-  )
+  );
 }

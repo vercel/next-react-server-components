@@ -1,14 +1,13 @@
-import Header from './header'
-import Meta from './meta'
+import Header from './header';
 
-import styles from './page.module.css'
+import './meta.css';
+import styles from './page.module.css';
 
 export default function Page({ children }) {
   return (
     <div className={styles.main}>
-      <Meta />
       <Header />
       <div className={styles.page}>{children}</div>
     </div>
-  )
+  );
 }

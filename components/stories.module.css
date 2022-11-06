@@ -15,7 +15,7 @@
 }
 
 .count::after {
-  content: ".";
+  content: '.';
 }
 
 .story {

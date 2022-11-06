@@ -1,7 +1,7 @@
-import Story from './story'
-import Link from 'next/link'
+import Story from './story';
+import Link from 'next/link';
 
-import styles from './stories.module.css'
+import styles from './stories.module.css';
 
 export default ({ stories, page = 1, offset = null }) => (
   <div>
@@ -21,4 +21,4 @@ export default ({ stories, page = 1, offset = null }) => (
       </Link>
     </footer>
   </div>
-)
+);
