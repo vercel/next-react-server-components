@@ -12,8 +12,8 @@ body {
   box-sizing: border-box;
   color: #333;
   -webkit-font-smoothing: antialiased;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 
 h1 {
@@ -46,4 +46,23 @@ section {
 
 section a {
   color: #1386ff;
+}
+
+.main {
+  width: 85%;
+  margin: auto;
+  padding: 10px 0 0 0;
+}
+
+.page {
+  color: #828282;
+  background: #fff;
+  padding: 3px 10px;
+}
+
+@media (max-width: 750px) {
+  .main {
+    padding: 0;
+    width: auto;
+  }
 }

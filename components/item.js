@@ -2,17 +2,20 @@ import { Suspense } from 'react';
 import Story from './story';
 import Comment from './comment';
 import CommentForm from './comment-form';
-import useData from '../lib/use-data';
+import fetchData from '../lib/fetch-data';
 import getComments from '../lib/get-comments';
 import Skeletons from './skeletons';
 
 import styles from './item.module.css';
 
-function Comments({ story }) {
-  if (!story) return <div className={styles.loading}>No Comments</div>;
-  const { data: comments } = useData(`comments/${story.id}`, () =>
-    getComments(story.comments)
-  );
+async function Comments({ story }) {
+  if (!story) {
+    return <div className={styles.loading}>No Comments</div>;
+  }
+
+  const data = await fetchData(`comments/${story.id}`);
+  const comments = await getComments(data.comments);
+
   return (
     <div className={styles.comments}>
       {(comments || []).map((comment) => (
@@ -26,11 +29,9 @@ export default function Item({ story }) {
   return (
     <div className={styles.item}>
       <Story {...story} />
-
       <div className={styles.form}>
         <CommentForm />
       </div>
-
       <Suspense
         fallback={
           <div>
