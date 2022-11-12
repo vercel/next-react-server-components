@@ -1,6 +1,8 @@
+import styles from './server-info.module.css';
+
 export default function ServerInfo() {
   return (
-    <div style={{ textAlign: 'center', fontSize: 14, paddingBottom: 20 }}>
+    <div className={styles['server-info']}>
       Rendered at {new Date().toTimeString()} with Vercel.
     </div>
   );

@@ -2,7 +2,6 @@ import { Suspense } from 'react';
 import Story from './story';
 import Comment from './comment';
 import CommentForm from './comment-form';
-import fetchData from '../lib/fetch-data';
 import getComments from '../lib/get-comments';
 import Skeletons from './skeletons';
 
@@ -13,8 +12,7 @@ async function Comments({ story }) {
     return <div className={styles.loading}>No Comments</div>;
   }
 
-  const data = await fetchData(`comments/${story.id}`);
-  const comments = await getComments(data.comments);
+  const comments = await getComments(story.comments);
 
   return (
     <div className={styles.comments}>

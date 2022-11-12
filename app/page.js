@@ -11,11 +11,12 @@ import { transform } from '../lib/get-item';
 
 async function StoryWithData({ id }) {
   const data = await fetchData(`item/${id}`);
-  return <Story {...transform(data)} />;
+  const story = transform(data);
+  return <Story {...story} />;
 }
 
 export default async function RSCPage() {
-  const storyIds = await fetchData('topstories', 2000);
+  const storyIds = await fetchData('topstories');
 
   return (
     <>

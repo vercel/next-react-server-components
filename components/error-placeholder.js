@@ -1,7 +1,11 @@
+import { useEffect } from "react";
+
 export default function ErrorPlaceholder({ error }) {
-  if (process.env.NODE_ENV === 'development') {
+  useEffect(() => {
+    // Log the error to an error reporting service
     console.error(error);
-  }
+  }, [error]);
+
   return (
     <span>{`Application error: a server-side exception has occurred`}</span>
   );

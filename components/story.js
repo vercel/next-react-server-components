@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 import timeAgo from '../lib/time-ago';
 
+import styles from './story.module.css';
+
 export default function Story({
   id,
   title,
@@ -18,7 +20,7 @@ export default function Story({
 
   return (
     <div style={{ margin: '5px 0' }}>
-      <div className="title">
+      <div className={styles.title}>
         <span
           style={{
             cursor: 'pointer',
@@ -32,12 +34,12 @@ export default function Story({
         </span>
         <a href={url}>{title}</a>
         {url && (
-          <span className="source">
+          <span className={styles.source}>
             <a href={`http://${host}`}>{host.replace(/^www\./, '')}</a>
           </span>
         )}
       </div>
-      <div className="meta">
+      <div className={styles.meta}>
         {score} {plural(score, 'point')} by{' '}
         <a href={`/user?id=${user}`}>{user}</a>{' '}
         <a href={`/item?id=${id}`}>
