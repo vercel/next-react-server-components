@@ -9,5 +9,12 @@
     "next": "^13.0.3",
     "react": "^18.3.0-next",
     "react-dom": "^18.3.0-next"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "semi": false,
+    "tabWidth": 2,
+    "trailingComma": "none"
   }
 }
