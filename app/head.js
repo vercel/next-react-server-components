@@ -9,6 +9,7 @@ export default async function Head() {
         content="Hacker News clone built with Next.js 13 and the app directory (beta)."
       />
       <meta charSet="utf-8" />
+      <link href="/favicon.ico" rel="shortcut icon" />
       <meta content="#ffa52a" name="theme-color" />
     </>
   )
