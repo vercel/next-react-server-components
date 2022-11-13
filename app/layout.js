@@ -1,11 +1,11 @@
-import Header from '../components/header';
+import Header from '../components/header'
 
-import '../styles/globals.css';
-import styles from '../styles/RootLayout.module.css';
+import '../styles/globals.css'
+import styles from '../styles/RootLayout.module.css'
 
 export default function RootLayout({ children }) {
   return (
-    <html>
+    <html lang="en">
       <body>
         <main className={styles.main}>
           <Header />
@@ -13,5 +13,5 @@ export default function RootLayout({ children }) {
         </main>
       </body>
     </html>
-  );
+  )
 }
