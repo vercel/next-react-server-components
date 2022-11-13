@@ -1,7 +1,7 @@
-import Story from './story';
-import Link from 'next/link';
+import Story from './story'
+import Link from 'next/link'
 
-import styles from './stories.module.css';
+import styles from './stories.module.css'
 
 export default ({ stories, page = 1, offset = null }) => (
   <div>
@@ -16,9 +16,7 @@ export default ({ stories, page = 1, offset = null }) => (
       </div>
     ))}
     <footer className={styles.footer}>
-      <Link prefetch href={`/news?p=${page + 1}`}>
-        More
-      </Link>
+      <Link href={`/news?p=${page + 1}`}>More</Link>
     </footer>
   </div>
-);
+)

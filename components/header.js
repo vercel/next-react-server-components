@@ -1,8 +1,8 @@
-import Nav from './nav';
-import Logo from './logo';
-import Link from 'next/link';
+import Nav from './nav'
+import Logo from './logo'
+import Link from 'next/link'
 
-import styles from './header.module.css';
+import styles from './header.module.css'
 
 export default function Header() {
   return (
@@ -19,10 +19,10 @@ export default function Header() {
         </div>
       </div>
       <div className={styles.right}>
-        <a href="/login" className={styles.login}>
+        <a href="/" className={styles.login}>
           login
         </a>
       </div>
     </header>
-  );
+  )
 }

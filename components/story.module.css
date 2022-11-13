@@ -9,7 +9,7 @@
 }
 
 .title > a:visited {
-  color: #828282;
+  color: #757575;
 }
 
 .meta {
@@ -23,7 +23,7 @@
 
 .source a,
 .meta a {
-  color: #828282;
+  color: #757575;
   text-decoration: none;
 }
 
