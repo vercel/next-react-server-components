@@ -1,6 +1,7 @@
 .item-skeleton {
   margin: 5px 0;
   overflow: hidden;
+  flex: 100 1;
 }
 
 .item-skeleton:before,

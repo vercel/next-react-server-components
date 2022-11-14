@@ -1,6 +1,22 @@
+.story {
+  flex: 100 1;
+  display: inline-block;
+}
+
 .title {
   font-size: 15px;
   margin-bottom: 3px;
+}
+
+.votearrow {
+  cursor: pointer;
+  font-family: sans-serif;
+  color: #ccc;
+}
+
+.votearrow--voted {
+  composes: votearrow;
+  color: #ffa52a
 }
 
 .title > a {

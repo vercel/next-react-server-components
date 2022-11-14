@@ -1,5 +1,13 @@
 module.exports = {
   experimental: {
-    appDir: true,
+    appDir: true
   },
-};
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: '/news/1'
+      }
+    ]
+  }
+}
