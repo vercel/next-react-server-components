@@ -12,8 +12,8 @@ This is a demo app of the Hacker News website clone, which shows Next.js 13's `a
 
 ### Running Locally
 
-1. `yarn install`
-2. `yarn dev`
+1. `pnpm install`
+2. `pnpm dev`
 
 Go to `localhost:3000`.
 
