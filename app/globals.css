@@ -22,3 +22,21 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+main {
+  width: 85%;
+  padding: 10px 0 0 0;
+}
+
+.page {
+  color: #757575;
+  background: #fff;
+  padding: 3px 10px;
+}
+
+@media (max-width: 750px) {
+  main {
+    padding: 0;
+    width: 100%;
+  }
+}
