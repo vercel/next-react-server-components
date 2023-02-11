@@ -1,4 +1,5 @@
 {
+  "packageManager": "pnpm@7.15.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -6,7 +7,7 @@
   },
   "dependencies": {
     "ms": "2.1.3",
-    "next": "^13.0.3",
+    "next": "^13.1.0",
     "react": "^18.3.0-next",
     "react-dom": "^18.3.0-next"
   },

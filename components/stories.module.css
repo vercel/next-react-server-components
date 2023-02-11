@@ -6,7 +6,6 @@
 .count {
   flex-basis: auto;
   flex-grow: 1;
-  vertical-align: top;
   font-size: 14px;
   padding-right: 5px;
   display: block;
@@ -24,7 +23,7 @@
 }
 
 .footer {
-  padding: 10px 0 40px 30px;
+  padding: 10px 0 0 32px;
 }
 
 .footer a {
