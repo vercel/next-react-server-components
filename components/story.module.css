@@ -5,18 +5,20 @@
 
 .title {
   font-size: 15px;
-  margin-bottom: 3px;
+  margin-bottom: 1px;
 }
 
 .votearrow {
   cursor: pointer;
   font-family: sans-serif;
   color: #ccc;
+  font-size: 12px;
+  margin-right: 2px;
 }
 
 .votearrow--voted {
   composes: votearrow;
-  color: #ffa52a
+  color: #ffa52a;
 }
 
 .title > a {
