@@ -1,5 +1,5 @@
-import Skeletons from '../components/skeletons';
+import Skeletons from 'components/skeletons'
 
 export default function Loading() {
-  return <Skeletons />;
+  return <Skeletons />
 }

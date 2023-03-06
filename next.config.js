@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
-    fetchCache: true
+    appDir: true
   },
   async rewrites() {
     return [
