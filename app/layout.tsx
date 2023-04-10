@@ -1,7 +1,6 @@
 import './globals.css'
 import Header from 'components/header'
 
-export const revalidate = 60
 export const metadata = {
   title: 'Next.js 13 + React Server Components Demo',
   description:
