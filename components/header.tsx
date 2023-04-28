@@ -23,8 +23,8 @@ export default function Header() {
         </Link>
         <div className={styles.nav}>
           <ul className={styles['nav-ul']}>
-            {navItems.map(({ href, title }) => (
-              <li key={href}>
+            {navItems.map(({ href, title }, index) => (
+              <li key={index}>
                 <Link href={href}>{title}</Link>
               </li>
             ))}
