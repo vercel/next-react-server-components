@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/node': ^18.15.11
-  '@types/react': 18.0.34
+  '@types/node': ^18.16.2
+  '@types/react': 18.2.0
   ms: 3.0.0-canary.1
   next: 13.3.2-canary.12
   react: 18.2.0
@@ -10,8 +10,8 @@ specifiers:
   typescript: ^5.0.4
 
 dependencies:
-  '@types/node': 18.15.11
-  '@types/react': 18.0.34
+  '@types/node': 18.16.2
+  '@types/react': 18.2.0
   ms: 3.0.0-canary.1
   next: 13.3.2-canary.12_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -111,16 +111,16 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@types/node/18.15.11:
-    resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==}
+  /@types/node/18.16.2:
+    resolution: {integrity: sha512-GQW/JL/5Fz/0I8RpeBG9lKp0+aNcXEaVL71c0D2Q0QHDTFvlYKT7an0onCUXj85anv7b4/WesqdfchLc0jtsCg==}
     dev: false
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: false
 
-  /@types/react/18.0.34:
-    resolution: {integrity: sha512-NO1UO8941541CJl1BeOXi8a9dNKFK09Gnru5ZJqkm4Q3/WoQJtHvmwt0VX0SB9YCEwe7TfSSxDuaNmx6H2BAIQ==}
+  /@types/react/18.2.0:
+    resolution: {integrity: sha512-0FLj93y5USLHdnhIhABk83rm8XEGA7kH3cr+YUlvxoUGp1xNt/DINUMvqPxLyOQMzLmZe8i4RTHbvb8MC7NmrA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -138,8 +138,8 @@ packages:
       streamsearch: 1.1.0
     dev: false
 
-  /caniuse-lite/1.0.30001477:
-    resolution: {integrity: sha512-lZim4iUHhGcy5p+Ri/G7m84hJwncj+Kz7S5aD4hoQfslKZJgt0tHc/hafVbqHC5bbhHb+mrW2JOUHkI5KH7toQ==}
+  /caniuse-lite/1.0.30001481:
+    resolution: {integrity: sha512-KCqHwRnaa1InZBtqXzP98LPg0ajCVujMKjqKDhZEthIpAsJl/YEIa3YvXjGXPVqzZVguccuu7ga9KOE1J9rKPQ==}
     dev: false
 
   /client-only/0.0.1:
@@ -196,7 +196,7 @@ packages:
       '@next/env': 13.3.2-canary.12
       '@swc/helpers': 0.5.1
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001477
+      caniuse-lite: 1.0.30001481
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
