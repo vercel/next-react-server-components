@@ -1,9 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-
+import Link from 'next/link'
 import timeAgo from '../lib/time-ago'
-
 import styles from './story.module.css'
 
 export default function Story({
@@ -38,14 +37,14 @@ export default function Story({
       </div>
       <div className={styles.meta}>
         {score} {plural(score, 'point')} by{' '}
-        <a href={`/user/${user}`}>{user}</a>{' '}
-        <a href={`/item/${id}`}>
+        <Link href={`/user/${user}`}>{user}</Link>{' '}
+        <Link href={`/item/${id}`}>
           {timeAgo(new Date(date)) /* note: we re-hydrate due to ssr */} ago
-        </a>{' '}
+        </Link>{' '}
         |{' '}
-        <a href={`/item/${id}`}>
+        <Link href={`/item/${id}`}>
           {commentsCount} {plural(commentsCount, 'comment')}
-        </a>
+        </Link>
       </div>
     </div>
   )
