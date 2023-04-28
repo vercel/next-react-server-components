@@ -33,8 +33,7 @@ export default function Item({ story }) {
       <Suspense
         fallback={
           <div>
-            {`Loading comments...`}
-            <Skeletons count={3} />
+            <Skeletons count={Math.min(10, story.comments.length)} />
           </div>
         }
       >
