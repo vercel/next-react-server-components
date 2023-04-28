@@ -6,8 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "@types/node": "^18.15.11",
-    "@types/react": "18.0.34",
+    "@types/node": "^18.16.2",
+    "@types/react": "18.2.0",
     "ms": "3.0.0-canary.1",
     "next": "13.3.2-canary.12",
     "react": "18.2.0",
