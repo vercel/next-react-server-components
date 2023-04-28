@@ -37,9 +37,11 @@ export default function Story({
       </div>
       <div className={styles.meta}>
         {score} {plural(score, 'point')} by{' '}
-        <Link href={`/user/${user}`}>{user}</Link>{' '}
+        <span>{user}</span>{' '}
         <Link href={`/item/${id}`}>
-          {timeAgo(new Date(date)) /* note: we re-hydrate due to ssr */} ago
+          <span suppressHydrationWarning>
+            {timeAgo(new Date(date))} ago
+          </span>
         </Link>{' '}
         |{' '}
         <Link href={`/item/${id}`}>

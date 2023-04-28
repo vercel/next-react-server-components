@@ -13,8 +13,7 @@ export default function Comment({ user, text, date, comments, commentsCount }) {
 
   return (
     <div className={styles.comment}>
-      <div className={styles.meta}>
-        {/* TODO: time hydration mismatch */}
+      <div className={styles.meta} suppressHydrationWarning>
         {user} {timeAgo(new Date(date))} ago{' '}
         <span onClick={toggle} className={styles.toggle}>
           {toggled ? `[+${(commentsCount || 0) + 1}]` : '[-]'}
