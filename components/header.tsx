@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <Link href="/">
+        <Link href="/" prefetch={false}>
           <span className={styles.logo}>
             <span className={styles.n}>N</span>
           </span>
@@ -32,7 +32,7 @@ export default function Header() {
         </div>
       </div>
       <div className={styles.right}>
-        <Link href="/" className={styles.login}>
+        <Link href="/" className={styles.login} prefetch={false}>
           login
         </Link>
       </div>
