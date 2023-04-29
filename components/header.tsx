@@ -25,7 +25,7 @@ export default function Header() {
           <ul className={styles['nav-ul']}>
             {navItems.map(({ href, title }, index) => (
               <li key={index}>
-                <Link href={href}>{title}</Link>
+                <Link href={href} prefetch={false}>{title}</Link>
               </li>
             ))}
           </ul>
