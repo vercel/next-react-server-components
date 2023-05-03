@@ -1,5 +1,7 @@
 import './globals.css'
 import Header from 'components/header'
+import SystemInfo from 'components/server-info'
+import Footer from 'components/footer'
 
 export const metadata = {
   title: 'Next.js 13 + React Server Components Demo',
@@ -18,7 +20,11 @@ export default function RootLayout({ children }) {
       <body>
         <main>
           <Header />
-          <div className="page">{children}</div>
+          <div className="page">
+            {children}
+            <Footer />
+            <SystemInfo />
+          </div>
         </main>
       </body>
     </html>
