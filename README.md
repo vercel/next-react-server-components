@@ -1,14 +1,12 @@
-# Next.js 13 + React Server Components
+# Next.js App Router + React Server Components
 
 Try the demo live here: [**next-rsc-hn.vercel.app**](https://next-rsc-hn.vercel.app).
 
-> **Warning**: This demo showcases using Server Components with the `app` directory inside Next.js 13. **It's not ready for production adoption, or performance benchmarking** as the underlying APIs are not stable yet, and might change or be improved in the future.
-
 ## Introduction
 
-This is a demo app of the Hacker News website clone, which shows Next.js 13's `app` directory (beta) with support for React Server Components.
+This is a demo app of the Hacker News website clone, which shows Next.js App Router with support for React Server Components.
 
-[Learn more](https://beta.nextjs.org/docs/rendering/server-and-client-components).
+[Learn more](https://nextjs.org/docs/getting-started/react-essentials#server-components).
 
 ### Running Locally
 
