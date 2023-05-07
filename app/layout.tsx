@@ -2,6 +2,7 @@ import './globals.css'
 import Header from 'components/header'
 import SystemInfo from 'components/server-info'
 import Footer from 'components/footer'
+import { Suspense } from 'react'
 
 export const metadata = {
   title: 'Next.js 13 + React Server Components Demo',
@@ -21,9 +22,11 @@ export default function RootLayout({ children }) {
         <main>
           <Header />
           <div className="page">
-            {children}
-            <Footer />
-            <SystemInfo />
+            <Suspense>
+              {children}
+              <Footer />
+              <SystemInfo />
+            </Suspense>
           </div>
         </main>
       </body>

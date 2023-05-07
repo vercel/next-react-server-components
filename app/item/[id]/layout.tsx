@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
-import Story from 'components/story';
-import CommentForm from 'components/comment-form';
-import styles from './layout.module.css';
+import Story from 'components/story'
+import CommentForm from 'components/comment-form'
+import styles from './layout.module.css'
 import getItem from 'lib/get-item'
 
 export default async function ItemPage({ params, children }) {
@@ -18,5 +18,5 @@ export default async function ItemPage({ params, children }) {
       </div>
       {children}
     </div>
-  );
+  )
 }
