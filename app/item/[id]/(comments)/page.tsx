@@ -1,17 +1,19 @@
-import Comment from 'components/comment';
+import Comment from 'components/comment'
 import getItem from 'lib/get-item'
-import getComments from 'lib/get-comments';
-import styles from './page.module.css';
+import getComments from 'lib/get-comments'
+import styles from './page.module.css'
+
+export const preferredRegion = 'home'
 
 export default async function Comments({ params }) {
   const { id } = params
   const story = await getItem(id)
-  const comments = await getComments(story.comments);
+  const comments = await getComments(story.comments)
   return (
     <div className={styles.comments}>
       {(comments || []).map((comment) => (
         <Comment key={comment.id} {...comment} />
       ))}
     </div>
-  );
+  )
 }
