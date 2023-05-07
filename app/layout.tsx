@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <main>
           <Header />
           <div className="page">
-            <Suspense>
+            <Suspense fallback={<div style={{ height: '100vh' }} />}>
               {children}
               <Footer />
               <SystemInfo />
