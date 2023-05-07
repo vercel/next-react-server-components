@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <Link href="/" prefetch={false}>
+        <Link href="/" prefetch={true}>
           <span className={styles.logo}>
             <span className={styles.n}>N</span>
           </span>
@@ -25,14 +25,16 @@ export default function Header() {
           <ul className={styles['nav-ul']}>
             {navItems.map(({ href, title }, index) => (
               <li key={index}>
-                <Link href={href} prefetch={false}>{title}</Link>
+                <Link href={href} prefetch={true}>
+                  {title}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
       </div>
       <div className={styles.right}>
-        <Link href="/" className={styles.login} prefetch={false}>
+        <Link href="/" className={styles.login} prefetch={true}>
           login
         </Link>
       </div>
