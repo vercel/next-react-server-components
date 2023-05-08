@@ -36,15 +36,12 @@ export default function Story({
         )}
       </div>
       <div className={styles.meta}>
-        {score} {plural(score, 'point')} by{' '}
-        <span>{user}</span>{' '}
+        {score} {plural(score, 'point')} by <span>{user}</span>{' '}
         <Link href={`/item/${id}`}>
-          <span suppressHydrationWarning>
-            {timeAgo(new Date(date))} ago
-          </span>
+          <span suppressHydrationWarning>{timeAgo(new Date(date))} ago</span>
         </Link>{' '}
         |{' '}
-        <Link href={`/item/${id}`}>
+        <Link href={`/item/${id}`} prefetch={true}>
           {commentsCount} {plural(commentsCount, 'comment')}
         </Link>
       </div>
