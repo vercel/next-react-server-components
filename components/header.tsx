@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <Link href="/" prefetch={false}>
+        <Link href="/">
           <span className={styles.logo}>
             <span className={styles.n}>N</span>
           </span>
