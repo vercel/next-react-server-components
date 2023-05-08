@@ -2,13 +2,13 @@ import styles from './header.module.css'
 import Link from 'next/link'
 
 const navItems = [
-  { href: '/', title: 'new' },
-  { href: '/', title: 'past' },
-  { href: '/', title: 'show' },
-  { href: '/', title: 'ask' },
-  { href: '/', title: 'show' },
-  { href: '/', title: 'jobs' },
-  { href: '/', title: 'submit' }
+  { title: 'new' },
+  { title: 'past' },
+  { title: 'show' },
+  { title: 'ask' },
+  { title: 'show' },
+  { title: 'jobs' },
+  { title: 'submit' }
 ]
 
 export default function Header() {
@@ -23,18 +23,18 @@ export default function Header() {
         </Link>
         <div className={styles.nav}>
           <ul className={styles['nav-ul']}>
-            {navItems.map(({ href, title }, index) => (
+            {navItems.map(({ title }, index) => (
               <li key={index}>
-                <Link href={href} prefetch={false}>{title}</Link>
+                <span>{title}</span>
               </li>
             ))}
           </ul>
         </div>
       </div>
       <div className={styles.right}>
-        <Link href="/" className={styles.login} prefetch={false}>
+        <span className={styles.login}>
           login
-        </Link>
+        </span>
       </div>
     </header>
   )
