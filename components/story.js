@@ -26,7 +26,7 @@ export default function Story({
         >
           &#9650;
         </span>
-        <a href={url}>{title}</a>
+        <a href={url} rel="noopener noreferrer nofollow" target="_blank">{title}</a>
         {url && (
           <span className={styles.source}>
             {' ('}
