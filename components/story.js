@@ -30,7 +30,7 @@ export default function Story({
         {url && (
           <span className={styles.source}>
             {' ('}
-            <a href={`http://${host}`}>{host.replace(/^www\./, '')}</a>
+            <a href={`http://${host}`} rel="noopener noreferrer nofollow" target="_blank">{host.replace(/^www\./, '')}</a>
             {')'}
           </span>
         )}
