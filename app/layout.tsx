@@ -6,11 +6,14 @@ import Footer from 'components/footer'
 export const metadata = {
   title: 'Next.js App Router + React Server Components Demo',
   description: 'Hacker News clone built with the Next.js App Router.',
-  themeColor: '#ffa52a',
   robots: {
     index: true,
     follow: true
   }
+}
+
+export const viewport = {
+  themeColor: '#ffa52a'
 }
 
 export default function RootLayout({ children }) {
