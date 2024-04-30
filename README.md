@@ -1,12 +1,10 @@
 # Next.js App Router + React Server Components
 
-Try the demo live here: [**next-rsc-hn.vercel.app**](https://next-rsc-hn.vercel.app).
+Try the demo live here: [**https://next-news.vercel.app**](https://https://next-news.vercel.app).
 
 ## Introduction
 
-This is a demo app of the Hacker News website clone, which shows Next.js App Router with support for React Server Components.
-
-[Learn more](https://nextjs.org/docs/getting-started/react-essentials#server-components).
+This is a demo app of the Hacker News website clone, which shows Next.js App Router with support for [React Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components).
 
 ### Running Locally
 
