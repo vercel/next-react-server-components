@@ -1,6 +1,6 @@
 # Next.js App Router + React Server Components
 
-Try the demo live here: [**https://next-news.vercel.app**](https://https://next-news.vercel.app).
+Try the demo live here: [**https://next-news.vercel.app**](https://next-news.vercel.app).
 
 ## Introduction
 
