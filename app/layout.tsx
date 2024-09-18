@@ -23,6 +23,8 @@ export default function RootLayout({ children }) {
         <main>
           <Header />
           <div className="page">
+            <p>Hello World!!!</p>
+            <p>Holy fuck this took me forever!</p>
             {children}
             <Footer />
             <SystemInfo />
